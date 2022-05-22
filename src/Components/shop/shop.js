@@ -1,4 +1,6 @@
 import {useState,useEffect} from 'react';
+import { Link } from 'react-router-dom';
+import {Main,Div} from './shopStyle';
 function Shop(){
 useEffect(()=>{
     fetchItems();
@@ -14,13 +16,24 @@ const fetchItems = async()=>{
 }
 
     return(
-        <div>
-
-        <header>Products</header>
+        <Main>
             {items.map(item=>(
-                <h1>{item.title}</h1>
+                <Div className='' key={item.id}>
+                    <div className='imgdiv'>
+                        <img src={item.image} alt={item.title} />
+                    </div>
+                 <div className='details'>  
+                     <div className='detail' > 
+                    <p>{item.title}</p>
+                    <p>price: {item.price} $</p>
+                    </div>
+                    <Link to={'/viewproduct'}>
+                    <button>view product</button>
+                    </Link>
+                </div>
+                </Div>
             ))}
-        </div>
+        </Main>
     )
 }
 export default Shop;
