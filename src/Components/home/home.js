@@ -1,11 +1,16 @@
 // import './homeStyle'
-import {HomeStyles} from './homeStyle'
+import {HomeStyles,Div} from './homeStyle'
+import { Link } from "react-router-dom";
 function Home(){
     return(
         <HomeStyles>
-        <div className="home">
-        <p>Welcome,to the fake fashion. The online shopping interface that has varity of clothing that has nothing to do with you</p>
-        </div>
+        <Div>
+        <h2>Fake Fashion</h2>
+        <p>Welcome,to the fake fashion. The online shopping interface that has varity of clothing.</p>
+        <Link to={'/shop'}>
+        <button>SHOP now</button>
+        </Link>
+        </Div>
         </HomeStyles>
     )
 }
