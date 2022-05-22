@@ -4,6 +4,8 @@ import Home from './Components/home/home';
 import Shop from './Components/shop/shop';
 import About from './Components/about/about';
 import styled from "styled-components";
+import ViewProduct from "./Components/viewProduct/viewProduct";
+import Cart from "./Components/cart/cart";
 function App() {
   const Div = styled.div`
    display: flex; 
@@ -18,6 +20,8 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/shop" element={<Shop/>} />
       <Route path="/about" element={<About/>} />
+      <Route path="/viewproduct" element={<ViewProduct/>} />
+      <Route path="/cart" element={<Cart/>} />
     </Routes>
   </Div>
   </BrowserRouter>
