@@ -14,6 +14,9 @@ function  Nav (){
             <Link to={'/about'}>
             <li>ABOUT</li>
             </Link>
+            <Link to={'/cart'}>
+            <li>CART</li>
+            </Link>
         </ul>
     </nav>        
     )
