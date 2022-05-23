@@ -12,7 +12,7 @@ const fetchItems = async()=>{
     const data = await fetch('https://fakestoreapi.com/products')
     const items =  await data.json();
     setItems(items);
-    console.log(items);
+    // console.log(items);
 }
 
     return(
@@ -27,7 +27,7 @@ const fetchItems = async()=>{
                     <p>{item.title}</p>
                     <p>price: {item.price} $</p>
                     </div>
-                    <Link to={'/viewproduct'}>
+                    <Link to={`/viewproduct/${item.id}`}>
                     <button>view product</button>
                     </Link>
                 </div>
