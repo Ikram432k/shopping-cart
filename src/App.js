@@ -20,8 +20,8 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/shop" element={<Shop/>} />
       <Route path="/about" element={<About/>} />
-      <Route path="/viewproduct" element={<ViewProduct/>} />
-      <Route path="/cart" element={<Cart/>} />
+      <Route path="/viewproduct/:id" element={<ViewProduct />} />
+      <Route path="/cart/:id" element={<Cart/>} />
     </Routes>
   </Div>
   </BrowserRouter>
