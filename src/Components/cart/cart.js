@@ -1,45 +1,48 @@
-import { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
-
-function Cart(){
-const { id } = useParams();
-const [item,setItem] = useState([]);
-useEffect(()=>{
-    fetchCart();
-},[])
-
-// const convertData =(data)=>{
-//     const {
-//         name: title,
-//         cost:price,
-//     } = data;
-//     return{
-//         title,price
-//     };
-// }
-
-const getItem =(data)=>{
-    let cloneItem = [...item];
-    cloneItem.push(data);
-    setItem(cloneItem);
-    console.log(item);
+import { Link } from "react-router-dom";
+import {Div} from './cartStyle'
+function CartItem(props){
+    const{id,quantity,img,title,price} = props.obj;
+    return(
+      <div id={id} className="cartItem">
+          <img  src={img} alt='product'/>
+          <div className="cartItemDetails">              
+              <p>{title}</p>
+              <p>{price}$</p>
+              <p>Quantity: {quantity}</p>
+              <button id={props.i} onClick={props.delete} className="del">delete</button>
+          </div>
+      </div>  
+    );
 }
+function Cart(props){
+    const check =()=>{
+        if(props.data.length === 0){
+            return<h1>Your Cart is Empty</h1>
+        } 
+    };
 
-const fetchCart=async()=>{
-    const response = await fetch(`https://fakestoreapi.com/products/${id}`)
-    const data = await response.json();
-    getItem(data);
-    // console.log(item);
-}
-return(
+    return(
+        <Div>
+            <div className="wholeCart">
+            <div className="cart">
+            {check()}
+            <main>
+                {props.data.map((obj,i)=>(
+                    <CartItem key={i} i={i} obj={obj} delete={props.delete}/>
+                ))}
+            </main>
+            <div className="bottomCart">
+                <p>Total Amount: {props.total}$</p>
+            <Link to={'/shop'}>
+            <button onClick={props.clear} className="proceed">
+                proceed to payment
+            </button>
+            </Link>
+            </div>
 
-    <div>
-        <h2>your shopping cart</h2>
-        {/* <div className="cartItem">
-            <p>{item.title}</p>
-            <p>{}</p>
-        </div> */}
-    </div>
+            </div>
+            </div>
+        </Div>
 )
 }
 export default Cart;
