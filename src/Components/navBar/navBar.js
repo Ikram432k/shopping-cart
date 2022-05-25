@@ -1,24 +1,28 @@
 import { Link } from "react-router-dom";
-import '../navBar/navBar.css'
-function  Nav (){
+import {Navs,Li} from './navBarStyle'
+function  Nav (props){
+    const navStyle={
+        color:"white",
+        textDecoration: 'none'
+        };
     return(
-    <nav>
-        <h1>Fake Fashion</h1>
+    <Navs>
+        <h1>Fake Store</h1>
         <ul className="nav-links">
-            <Link to={'/'}>
+            <Link style={navStyle} to={'/'}>
             <li>HOME</li>
             </Link>
-            <Link to={'/shop'}>
+            <Link style={navStyle} to={'/shop'}>
             <li>SHOP</li>
             </Link>
-            <Link to={'/about'}>
+            <Link style={navStyle} to={'/about'}>
             <li>ABOUT</li>
             </Link>
-            <Link to={'/cart'}>
-            <li>CART</li>
+            <Link style={navStyle} to={'/cart'} className="cartIcon">
+            <li>CART({props.length})</li>
             </Link>
         </ul>
-    </nav>        
+    </Navs>        
     )
 }
 export default Nav;
