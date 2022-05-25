@@ -9,9 +9,14 @@ useEffect(()=>{
 const[items,setItems] =useState([]);
 
 const fetchItems = async()=>{
+    try{
     const data = await fetch('https://fakestoreapi.com/products')
     const items =  await data.json();
     setItems(items);
+    }
+    catch(error){
+        alert('error occured')
+    }
     // console.log(items);
 }
 
