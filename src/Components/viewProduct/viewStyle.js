@@ -18,12 +18,12 @@ export const Div = styled.div`
         heigth:auto;
         object-fit:contain;
     }
-    // .btn{
-    //     display: flex;
-    //     align-items:center;
-    //     justify-content: space-between;
-    //     gap:10px;
-    // }
+    .btn{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        gap:10px;
+    }
     button{
         cursor: pointer;
         text-transform: uppercase;
