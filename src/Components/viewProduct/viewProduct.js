@@ -2,7 +2,7 @@ import { Link,useParams } from "react-router-dom";
 import {useState,useEffect} from 'react';
 import {Div} from "./viewStyle"
 
-function ViewProduct(){
+function ViewProduct(props){
     const { id } = useParams();
 
 const [product,setProduct] = useState({});
@@ -15,11 +15,15 @@ useEffect(()=>{
 
 
 const fetchProduct = async()=>{
+    try{
     const data = await fetch(`https://fakestoreapi.com/products/${id}`)
     const product = await data.json();
     setProduct(product);
     setRating(product.rating);
-    console.log(product);
+    }
+    catch(error){
+        alert('error occured')
+    }
 }
 
 const increase =()=>{
@@ -30,24 +34,18 @@ const decrease =()=>{
         setCount(count-1);
     }
 }
-const buyNow=()=>{
-    if(count>0){
-        alert("Thank you for your purchase");
-    }
-    else{
-        alert('The minimum qauntity of the purchase should be atlest one')
-    }
-}
+
 const handleCart=()=>{
-    // const temp = {
-    //     id:product.id,
-    //     quantity: count,
-    //     img: product.image,
-    //     title: product.title,
-    //     price: product.price,
-    //     };
-    //     props.getItems(temp);
-    }
+    alert('Your Order is Added to your Cart')
+    const temp = {
+        id:product.id,
+        quantity: count,
+        img: product.image,
+        title: product.title,
+        price: product.price,
+        };
+        props.getCartItems(temp);
+    };
 
     return(
         <Div>
@@ -57,18 +55,15 @@ const handleCart=()=>{
                 <p>{product.title}</p>
                 <p>Rating:{rating.rate}/5</p>
                 <p>{product.description}</p>
-                {/* <div className="btn">
+                <div className="btn">
                     <button onClick={decrease}>-</button>
                     <p>{count}</p>
                     <button onClick={increase}>+</button>
-                </div> */}
+                </div> 
                 <p>Price:{product.price}$</p>
                 <div className="btns">
-                    <Link to={`/cart/${product.id}`}>
-                    <button onClick={handleCart}>add to cart</button>
-                    </Link>
                     <Link to={'/shop'}>
-                    <button onClick={buyNow}>buy now</button>
+                    <button onClick={handleCart}>add to cart</button>
                     </Link>
                     <Link to={'/shop'}>
                     <button>go back</button>
