@@ -32,11 +32,18 @@ text-transform: uppercase;
         background-color:rgb(45, 91, 189);
         padding:8px 10px;
         font-size:15px;
-        // letter-spacing: 1px;
         transition: 0.5s;
         &:hover{
             background-color:white;
             color:black;
+        }
+    }
+    @media only screen and (max-width:768px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            padding:4px 7px;
         }
     }
 `;
