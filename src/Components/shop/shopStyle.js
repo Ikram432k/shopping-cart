@@ -9,7 +9,10 @@ export const Main = styled.main`
         height:20rem;
         width:100%;
         padding:3rem;
-        margin: 0px auto;    }   
+        margin: 0px auto;    }
+        @media only screen and (max-width:768px){
+            grid-template-columns: repeat(2,1fr);
+        }   
 `;
 export const Div = styled.div`
     display: flex;
@@ -47,4 +50,15 @@ export const Div = styled.div`
             border: 1px solid black;
         }
     }
-`;
+    @media only screen and (max-width:768px){
+        width:8rem;
+        button{
+            font-size:10px;
+            letter-spacing: 0px;
+        }
+        img{
+            height:15rem;
+            padding:1rem;
+        }
+    }
+    `;
