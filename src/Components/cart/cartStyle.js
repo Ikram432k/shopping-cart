@@ -73,4 +73,12 @@ export const Div = styled.div`
         align-items: center;
   
     }
-`;
+    @media only screen and (max-width:768px){
+        .cartItemDetails{
+            width:200px;
+        }
+        .wholeCart{
+        padding:20px 20px;
+        }
+    }  
+        `;
