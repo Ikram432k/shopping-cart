@@ -53,4 +53,12 @@ export const Div = styled.div`
         display: flex;
         gap:10px;
     }
-`;
+    @media only screen and (max-width:768px){
+        .product{
+        padding:20px 20px;
+        }
+        .productDetails{
+            width:200px;
+        }
+    }
+    `;
