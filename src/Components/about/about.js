@@ -5,7 +5,7 @@ function About(){
         <Div>
         <div className='icon'>
         <a href="https://github.com/Ikram432k">
-        <i class="fa fa-github"></i>
+        <i className="fa fa-github"></i>
         </a>
         <p>contact us</p>
         </div>
