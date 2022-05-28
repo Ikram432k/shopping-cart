@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import {Navs,Li} from './navBarStyle'
+import {Navs} from './navBarStyle'
 function  Nav (props){
     const navStyle={
         color:"white",
