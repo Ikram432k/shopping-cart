@@ -1,4 +1,4 @@
-import {BrowserRouter,Routes,Route} from "react-router-dom"
+import {HashRouter as Router,Routes,Route} from "react-router-dom"
 import Nav from '../navBar/navBar';
 import Home from '../home/home';
 import Shop from '../shop/shop';
@@ -61,11 +61,11 @@ function Main() {
         getTotal();
 }
   return (
-  <BrowserRouter>
+  <Router>
   <Div>
     <Nav length={cartItem.length}/>
     <Routes>
-      <Route path=""  element={<Home/>} />
+      <Route path="*"  element={<Home/>} />
       <Route path="/shop" element={<Shop/>} />
       <Route path="/about" element={<About/>} />
       <Route path="/viewproduct/:id" element={<ViewProduct getCartItems={getCartItems}/>} />
@@ -77,7 +77,7 @@ function Main() {
       />} />
     </Routes>
   </Div>
-  </BrowserRouter>
+  </Router>
   )
 }
 
