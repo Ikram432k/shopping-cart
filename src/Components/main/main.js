@@ -13,6 +13,8 @@ function Main() {
 
     useEffect(()=>{
       getTotal()
+    // eslint-disable-next-line no-use-before-define
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[cartItem]);
 
     const clearAll=()=>{
@@ -50,6 +52,8 @@ function Main() {
         if(!CheckProduct(product)){
         cartClone.push(product);
         setCartItems(cartClone);
+        alert('Your Order is Added to your Cart')
+
         }
         else{
             alert('Already Exist');
@@ -57,11 +61,11 @@ function Main() {
         getTotal();
 }
   return (
-  <BrowserRouter>
+  <BrowserRouter basename="/">
   <Div>
     <Nav length={cartItem.length}/>
     <Routes>
-      <Route path="/" element={<Home/>} />
+      <Route path="/"  element={<Home/>} />
       <Route path="/shop" element={<Shop/>} />
       <Route path="/about" element={<About/>} />
       <Route path="/viewproduct/:id" element={<ViewProduct getCartItems={getCartItems}/>} />
