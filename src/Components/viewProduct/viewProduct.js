@@ -10,6 +10,7 @@ const [rating,setRating] = useState({});
 const [count,setCount] = useState(1);
 useEffect(()=>{
     fetchProduct();
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[]);
 
 
@@ -36,7 +37,6 @@ const decrease =()=>{
 }
 
 const handleCart=()=>{
-    alert('Your Order is Added to your Cart')
     const temp = {
         id:product.id,
         quantity: count,
