@@ -61,11 +61,11 @@ function Main() {
         getTotal();
 }
   return (
-  <BrowserRouter basename="/">
+  <BrowserRouter>
   <Div>
     <Nav length={cartItem.length}/>
     <Routes>
-      <Route path="/"  element={<Home/>} />
+      <Route path=""  element={<Home/>} />
       <Route path="/shop" element={<Shop/>} />
       <Route path="/about" element={<About/>} />
       <Route path="/viewproduct/:id" element={<ViewProduct getCartItems={getCartItems}/>} />
