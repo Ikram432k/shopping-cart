@@ -9,7 +9,8 @@ export const Div = styled.div`
         justify-content: center;
         align-items: center;
         background-color: rgb(165,164,164);
-        padding: 20px 40px;    }
+        padding: 20px 40px;   
+    }
     button{
         cursor: pointer;
         text-transform: uppercase;
