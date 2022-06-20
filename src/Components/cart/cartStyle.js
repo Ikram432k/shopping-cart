@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import IMG from "../assets/bg.png" 
+
 export const Div = styled.div`
     flex: 1 1 0%;
     display: flex;
     justify-content: center;
+
     .wholeCart{
+        background-image: url(${IMG});
+        background-size: cover;
         flex: 1 1 0%;
         display: flex;
         justify-content: center;
@@ -36,6 +41,7 @@ export const Div = styled.div`
         padding: 20px 40px;
         min-height: 40vh;
         background-color: white;
+        border-radius: 10px;
      }
     .cartItem {
         display: flex;
