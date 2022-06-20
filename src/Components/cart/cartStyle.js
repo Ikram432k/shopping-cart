@@ -74,11 +74,15 @@ export const Div = styled.div`
   
     }
     @media only screen and (max-width:768px){
-        .cartItemDetails{
-            width:200px;
+        .cart{
+            width:20rem;
+            padding:20px 20px;
         }
-        .wholeCart{
-        padding:20px 20px;
+        img{
+            width:8rem;
+        }
+        .cartItemDetails{
+            width:10rem;
         }
     }  
         `;
