@@ -85,7 +85,7 @@ export const Div = styled.div`
             width:10rem;
         }
         .wholeCart{
-            width:20rem;
+            width:15rem;
         }
     }  
         `;
