@@ -1,8 +1,12 @@
 import styled from "styled-components";
+import IMG from "../assets/bg.png" 
+
 export const Div = styled.div`
     display: flex;
     justify-content: center;
     padding:3rem;
+    background-image: url(${IMG});
+    background-size: cover;
     background-color: rgb(165, 164, 164);
     flex-grow:1;
     .product{
@@ -12,6 +16,7 @@ export const Div = styled.div`
         background-color: white;
         height:100%;
         padding:20px 40px;
+        border-radius: 10px;
     }
     img{
         width:15rem;
