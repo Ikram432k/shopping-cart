@@ -11,7 +11,7 @@ export const Main = styled.main`
         padding:3rem;
         margin: 0px auto;    }
         @media only screen and (max-width:768px){
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(1,1fr);
         }   
 `;
 export const Div = styled.div`
@@ -51,7 +51,7 @@ export const Div = styled.div`
         }
     }
     @media only screen and (max-width:768px){
-        width:8rem;
+        width:15rem;
         button{
             font-size:10px;
             letter-spacing: 0px;
