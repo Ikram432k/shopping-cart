@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import IMG from "../assets/bg.png" 
 export const Main = styled.main`
     margin:0;
     padding:3rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:4rem; 
+    background-image: url(${IMG});
+    background-size: cover;
+
     img{
         height:20rem;
         width:100%;
