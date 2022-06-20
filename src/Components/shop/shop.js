@@ -13,11 +13,12 @@ const fetchItems = async()=>{
     const data = await fetch('https://fakestoreapi.com/products')
     const items =  await data.json();
     setItems(items);
+    console.log(items);
+
     }
     catch(error){
         alert('error occured')
     }
-    // console.log(items);
 }
 
     return(
