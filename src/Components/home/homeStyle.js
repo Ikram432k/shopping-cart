@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from '../assets/shop-img.jpg'
+import background from '../assets/bg.png';
 export const HomeStyles = styled.div`
     flex: 1 1 0%;
     display: flex;
@@ -25,10 +25,11 @@ export const Div = styled.div`
         letter-spacing: 10px;
     }
     p{
+        background-color:rgba(0,0,0,0.8);
         font-size:14px;
-        font-weight:500px;
+        font-weight:300px;
         text-align:center;
-        letter-spacing: 7px;
+        letter-spacing: 5px;
         line-height:1.5em;
         max-width:100vh;
         margin-top:15px;
