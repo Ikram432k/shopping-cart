@@ -86,6 +86,8 @@ export const Div = styled.div`
         }
         .wholeCart{
             width:15rem;
+            padding:20px 20px;
+
         }
     }  
         `;
