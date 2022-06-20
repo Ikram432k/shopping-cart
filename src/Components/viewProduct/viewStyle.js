@@ -17,6 +17,8 @@ export const Div = styled.div`
         width:15rem;
         heigth:auto;
         object-fit:contain;
+        padding-right: 10px;
+        border-right: 1px solid black;
     }
     .btn{
         display: flex;
@@ -46,7 +48,7 @@ export const Div = styled.div`
         flex-direction:column;
         justify-content: space-between;
         align-items:flex-start;
-        width:400px;
+        width:20rem;
         padding:0px 20px 0px 40px;
     }
     .btns{
@@ -54,11 +56,27 @@ export const Div = styled.div`
         gap:10px;
     }
     @media only screen and (max-width:768px){
-        .product{
+    .product{
+        align-items:center;    
+        flex-direction: column;
         padding:20px 20px;
+        width:20rem;
+
         }
         .productDetails{
-            width:200px;
+            width:10rem;
+            padding:5px;
+            gap:10px;
+        }
+        .btns{
+            border-top: 1px solid black;
+        }
+        img{
+            width:10rem;
+            padding-right: 0;
+            border-right: 0;
+            border-bottom: 1px solid black;
+            padding: 8px;
         }
     }
     `;
